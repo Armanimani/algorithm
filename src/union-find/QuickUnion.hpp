@@ -3,11 +3,11 @@
 #include <algorithm>
 #include <numeric>
 
-#include "union-find/Interface.hpp"
+#include "union-find/UnionFind_base.hpp"
 
 namespace algorithm::unionFind
 {
-class QuickUnion : public Interface
+class QuickUnion : public UnionFind_base
 {
 public:
 	explicit QuickUnion(const size_type n);

@@ -1,13 +1,9 @@
-#include "union-find/QuickFind.hpp"
-#include "union-find/QuickUnion.hpp"
-#include "union-find/QuickUnionWeighted.hpp"
-#include "union-find/QuickUnionPathComp.hpp"
-#include "union-find/QuickUnionWeightedPathComp.hpp"
+#include "union-find/UnionFind.hpp"
 #include <iostream>
 
 int main()
 {
-	algorithm::unionFind::QuickUnionWeightedPathComp uf(10);
+	algorithm::unionFind::QuickUnion_weightedPathComp uf(10);
 
 	uf.connect(1, 2);
 	uf.connect(3, 4);

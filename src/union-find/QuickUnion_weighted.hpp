@@ -4,10 +4,10 @@
 
 namespace algorithm::unionFind
 {
-class QuickUnionWeighted : public QuickUnion
+class QuickUnion_weighted : public QuickUnion
 {
 public:
-	explicit QuickUnionWeighted(const size_type n);
+	explicit QuickUnion_weighted(const size_type n);
 
 	void connect(const size_type p, const size_type q) noexcept override;
 
@@ -15,12 +15,12 @@ protected:
 	std::vector<size_type> size_{};
 };
 
-QuickUnionWeighted::QuickUnionWeighted(const size_type n) : QuickUnion(n)
+QuickUnion_weighted::QuickUnion_weighted(const size_type n) : QuickUnion(n)
 {
 	size_.resize(n, 1);
 }
 
-void QuickUnionWeighted::connect(const size_type p, const size_type q) noexcept
+void QuickUnion_weighted::connect(const size_type p, const size_type q) noexcept
 {
 	auto root_p = root(p);
 	auto root_q = root(q);

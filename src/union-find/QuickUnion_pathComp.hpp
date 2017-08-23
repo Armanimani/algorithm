@@ -4,10 +4,10 @@
 
 namespace algorithm::unionFind
 {
-class QuickUnionPathComp : public QuickUnion
+class QuickUnion_pathComp : public QuickUnion
 {
 public:
-	explicit QuickUnionPathComp(const size_type n);
+	explicit QuickUnion_pathComp(const size_type n);
 
 protected:
 	std::vector<size_type> size_{};
@@ -15,12 +15,12 @@ protected:
 	const size_type root(const size_type n) noexcept override;
 };
 
-QuickUnionPathComp::QuickUnionPathComp(const size_type n) : QuickUnion(n)
+QuickUnion_pathComp::QuickUnion_pathComp(const size_type n) : QuickUnion(n)
 {
 	size_.resize(n, 1);
 }
 
-auto QuickUnionPathComp::root(const size_type n) noexcept -> const size_type
+auto QuickUnion_pathComp::root(const size_type n) noexcept -> const size_type
 {
 	auto temp = n;
 	while (data_[temp] != temp)
